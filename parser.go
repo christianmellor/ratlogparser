@@ -90,8 +90,8 @@ func (b *EntryReaderWriter) Write(e Entry) error {
 	return nil
 }
 
-// NewEntryReader creates a new reader from a slice of entries
-// copies entries so the original slice is safe to reuse
+// NewEntryReaderWriter creates a new reader/writer from a slice
+// of entries. It copies entries so the original slice is safe to reuse
 func NewEntryReaderWriter(e []Entry) *EntryReaderWriter {
 	b := EntryReaderWriter{}
 	be := make([]Entry, len(e))
